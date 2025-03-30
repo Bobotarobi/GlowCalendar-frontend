@@ -1,10 +1,11 @@
 @use '@angular/material' as mat;
+@use 'app/pages/register-page/register-page-theme.scss' as register-page;
 
 @include mat.core();
 
 $application-theme: mat.define-theme((
   color: (
-    theme-type: dark,
+    theme-type: light,
     primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
   ),
@@ -16,6 +17,7 @@ $application-theme: mat.define-theme((
 :root {
   @include mat.all-component-themes($application-theme);
   @include mat.all-component-typographies($application-theme);
+  @include register-page.theme($application-theme);
   // Тут далі додавати всі стилі які використовуються на сторінках
 }
 
