@@ -1,0 +1,24 @@
+<div class="main-container">
+    <div class="login-container">
+      <div class="content-container ">
+        <img src="Logo.svg" style="width: 100%">
+        <form class="field-box" [formGroup]="loginForm">
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
+            <mat-label>Електронна адреса</mat-label>
+            <input matInput type="email" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true" >
+            <mat-label>Пароль</mat-label>
+            <input matInput type="password" [type]="hidePassword ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="passwordClickEvent($event)" [attr.aria-label]="'Сховати пароль'" [attr.aria-pressed]="hidePassword" type="button">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="button-container">
+            <a mat-button color="primary">Зареєструватися</a>
+            <button type="submit" mat-flat-button color="primary">Увійти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

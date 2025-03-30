@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+
+@mixin color($theme) {
+  .main-container {
+    background: mat.get-theme-color($theme, surface-container-low);
+  }
+
+  .login-container {
+    background: mat.get-theme-color($theme, surface);
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+}
