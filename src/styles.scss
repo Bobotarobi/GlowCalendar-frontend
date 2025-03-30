@@ -1,10 +1,11 @@
 @use '@angular/material' as mat;
+@use 'app/pages/login-page/_login-page-theme.scss' as login-page;
 
 @include mat.core();
 
 $application-theme: mat.define-theme((
   color: (
-    theme-type: dark,
+    theme-type: light,
     primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
   ),
@@ -16,6 +17,7 @@ $application-theme: mat.define-theme((
 :root {
   @include mat.all-component-themes($application-theme);
   @include mat.all-component-typographies($application-theme);
+  @include login-page.theme($application-theme);
   // Тут далі додавати всі стилі які використовуються на сторінках
 }
 
@@ -38,3 +40,6 @@ body {
   'GRAD' 0,
   'opsz' 24
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
