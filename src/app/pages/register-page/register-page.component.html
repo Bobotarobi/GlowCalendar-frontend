@@ -1,0 +1,37 @@
+<div class="main-container">
+  <div class="register-container">
+      <div class="register-content">
+        <h4 class="Title">
+          Реєстрація за кодом
+        </h4>
+        <form class="field-box">
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
+            <mat-label>Код підтвердження</mat-label>
+            <input matInput type="text" required maxlength="8">
+          </mat-form-field>
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
+            <mat-label>Електронна адреса</mat-label>
+            <input matInput type="email" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true" >
+            <mat-label>Пароль</mat-label>
+            <input matInput type="password" [type]="hidePassword ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="passwordClickEvent($event, 'password')" [attr.aria-label]="'Сховати пароль'" [attr.aria-pressed]="hidePassword" type="button">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true" >
+            <mat-label>Підтвердити пароль</mat-label>
+            <input matInput type="password" [type]="hideConfirmPassword ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="passwordClickEvent($event, 'confirmPassword')" [attr.aria-label]="'Сховати пароль'" [attr.aria-pressed]="hidePassword" type="button">
+              <mat-icon>{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="buttons-container">
+            <a mat-button color="primary">Назад</a>
+            <button type="submit" mat-flat-button color="primary">Зареєструватися</button>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
