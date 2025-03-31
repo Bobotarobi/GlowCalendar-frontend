@@ -7,5 +7,6 @@
          [formControl]="getControl(i)"
          (input)="onInput(i, $event)"
          (keydown)="onKeyDown($event, i)"
-  >
+         [@bounce]="animationStates[i]"
+         [ngClass]="{'incorrect-input': errorState && control.errors?.['incorrect']}">
 </div>

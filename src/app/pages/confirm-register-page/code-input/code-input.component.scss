@@ -16,6 +16,11 @@
   transition: border 0.3s ease-in-out;
 }
 
+.incorrect-input {
+  border-color: red !important;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
 .code-input:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);

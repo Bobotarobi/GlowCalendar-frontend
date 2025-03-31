@@ -27,11 +27,14 @@ export class ConfirmRegisterPageComponent implements AfterViewInit {
   }
 
   onKeyDown(event: KeyboardEvent) {
-    if (event.key === "Enter") {
-      const allFieldsFilled = this.codeForm.controls.every(control => control.value !== null);
+    if (event.key === 'Enter') {
+      const enteredCode = this.codeForm.controls.map(control => control.value).join('');
 
-      if (allFieldsFilled) {
-        console.log('Code Form:', this.codeForm.value);
+      const isValid = this.codeInputComponent.validateCode();
+      if (isValid) {
+        console.log('Code is correct');
+      } else {
+        console.log('Incorrect code');
       }
     }
   }
