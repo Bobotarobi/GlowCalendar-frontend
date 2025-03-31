@@ -8,10 +8,7 @@
         Впишіть код з електронної адреси яка прийшла вам на пошту.
       </p>
       <form class="field-box">
-        <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
-          <mat-label>Код</mat-label>
-          <input matInput type="text" required>
-        </mat-form-field>
+        <app-code-input (keydown)="onKeyDown($event)"></app-code-input>
         <button mat-stroked-button >Підтвердити</button>
       </form>
     </div>
