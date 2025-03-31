@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
-@use 'app/pages/register-page/register-page-theme.scss' as register-page;
+@use 'app/pages/register-page/_register-page-theme.scss' as register-page;
 @use 'app/pages/login-page/_login-page-theme.scss' as login-page;
+@use 'app/pages/confirm-register-page/_confirm-register-page-theme.scss' as confirm-register-page;
 
 @include mat.core();
 
@@ -20,6 +21,7 @@ $application-theme: mat.define-theme((
   @include mat.all-component-typographies($application-theme);
   @include register-page.theme($application-theme);
   @include login-page.theme($application-theme);
+  @include confirm-register-page.theme($application-theme);
   // Тут далі додавати всі стилі які використовуються на сторінках
 }
 

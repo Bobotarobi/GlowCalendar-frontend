@@ -3,11 +3,11 @@
 
 
 @mixin color($theme) {
-  .main-container {
+  main-container {
     background: mat.get-theme-color($theme, surface-container-low);
   }
 
-  .login-container {
+  .confirm-register-container {
     background: mat.get-theme-color($theme, surface-container);
   }
 }
