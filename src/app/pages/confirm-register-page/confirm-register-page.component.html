@@ -1,0 +1,16 @@
+<div class="main-container">
+  <div class="confirm-register-container">
+    <div class="content-container">
+      <h4>
+        Реєстрація за кодом
+      </h4>
+      <p class="confirm-text">
+        Впишіть код з електронної адреси яка прийшла вам на пошту.
+      </p>
+      <div class="field-box">
+        <app-code-input (keydown)="onKeyDown($event)"></app-code-input>
+        <button mat-stroked-button >Підтвердити</button>
+      </div>
+    </div>
+  </div>
+</div>

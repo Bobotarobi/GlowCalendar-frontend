@@ -1,0 +1,12 @@
+<div class="code-container">
+  <input *ngFor="let control of codeForm.controls; let i = index"
+         id="code-{{i}}"
+         class="code-input"
+         type="text"
+         maxlength="1"
+         [formControl]="getControl(i)"
+         (input)="onInput(i, $event)"
+         (keydown)="onKeyDown($event, i)"
+         [@bounce]="animationStates[i]"
+         [ngClass]="{'incorrect-input': errorState && control.errors?.['incorrect']}">
+</div>
