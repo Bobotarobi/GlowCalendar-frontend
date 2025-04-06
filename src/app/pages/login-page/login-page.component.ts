@@ -26,7 +26,7 @@ import {MatIcon} from "@angular/material/icon";
 })
 export class LoginPageComponent {
     loginForm: FormGroup = new FormGroup({});
-    hidePassword: boolean = false;
+    hidePassword: boolean = true;
 
     passwordClickEvent(event: MouseEvent): void {
       this.hidePassword = !this.hidePassword;
