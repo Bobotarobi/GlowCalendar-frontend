@@ -28,4 +28,5 @@ export class MainPageComponent {
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
+
 }
