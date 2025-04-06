@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @use 'app/pages/login-page/_login-page-theme.scss' as login-page;
+@use 'app/pages/main-page/_main-page-theme.scss' as main-page;
 
 @include mat.core();
 
@@ -18,6 +19,7 @@ $application-theme: mat.define-theme((
   @include mat.all-component-themes($application-theme);
   @include mat.all-component-typographies($application-theme);
   @include login-page.theme($application-theme);
+  @include main-page.theme($application-theme);
   // Тут далі додавати всі стилі які використовуються на сторінках
 }
 
