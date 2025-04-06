@@ -29,4 +29,5 @@ export class MainPageComponent {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
+
 }
