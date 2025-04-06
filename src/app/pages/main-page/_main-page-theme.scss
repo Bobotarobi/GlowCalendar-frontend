@@ -3,10 +3,28 @@
 
 
 @mixin color($theme) {
+
+
   .main-container {
     background: mat.get-theme-color($theme, surface-container);
 
+
   }
+
+  mat-toolbar {
+    background: mat.get-theme-color($theme, surface-container);
+  }
+
+  mat-drawer-container {
+    background: mat.get-theme-color($theme, surface-container);
+  }
+  mat-drawer-content {
+    background: mat.get-theme-color($theme, surface-container);
+  }
+  mat-drawer {
+    background: mat.get-theme-color($theme, surface-container);
+  }
+
 
 
 }

@@ -1,13 +1,105 @@
+<!--<div class="main-container">-->
+<!--  <mat-toolbar-->
+<!--    color="primary"-->
+<!--    class="d-flex justify-content-start align-items-center"-->
+<!--  >-->
+
+
+
+<!--    <div-->
+<!--      style="min-width: 20%"-->
+<!--      class="d-flex  align-items-center justify-content-start"-->
+<!--    >-->
+
+<!--      <button-->
+<!--        mat-icon-button-->
+<!--        (click)="drawer.toggle()"-->
+<!--        class="example-icon"-->
+<!--        aria-label="icon"-->
+<!--      >-->
+<!--        <mat-icon>menu</mat-icon>-->
+<!--      </button>-->
+<!--      <img src="Logo.svg" style="" />-->
+<!--    </div>-->
+
+<!--    <div-->
+<!--      class="d-flex justify-content-between align-items-center w-100"-->
+
+<!--    >-->
+<!--      <div class="d-flex justify-content-start align-items-center">-->
+<!--        <div class="d-flex justify-content-start align-items-center">-->
+<!--          <button mat-stroked-button>Сьогодні</button>-->
+<!--          <button mat-icon-button (click)="previousMonth()">-->
+<!--            <mat-icon>chevron_left</mat-icon>-->
+<!--          </button>-->
+<!--          <button mat-icon-button (click)="nextMonth()">-->
+<!--            <mat-icon>chevron_right</mat-icon>-->
+<!--          </button>-->
+<!--          <h2 class="m-2">Березень 2025</h2>-->
+<!--        </div>-->
+<!--        <mat-chip class="ms-2">Тиждень 13</mat-chip>-->
+<!--      </div>-->
+
+
+<!--    <div>-->
+<!--      <button mat-icon-button>-->
+<!--        <mat-icon>search</mat-icon>-->
+<!--      </button>-->
+<!--      <button mat-icon-button>-->
+<!--        <mat-icon>person</mat-icon>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--  </mat-toolbar>-->
+
+<!--  <mat-drawer-container class="example-container" autosize>-->
+<!--    <mat-drawer-->
+<!--      #drawer-->
+<!--      mode="side"-->
+<!--      class="drawer"-->
+<!--      opened-->
+<!--    ></mat-drawer>-->
+<!--    <mat-drawer-content class="drawer-content"> </mat-drawer-content>-->
+<!--  </mat-drawer-container>-->
+<!--</div>-->
+
 <div class="main-container">
-  <mat-grid-list cols="12"  rowHeight="100px">
-    @for (tile of tiles; track tile) {
-      <mat-grid-tile
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">{{tile.text}}</mat-grid-tile>
-    }
-  </mat-grid-list>
+  <mat-toolbar color="primary" class="custom-toolbar">
+    <div class="toolbar-left">
+      <button mat-icon-button (click)="drawer.toggle()" class="menu-button" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <img src="Logo.svg" class="logo" alt="Logo" />
+    </div>
 
+    <div class="toolbar-center">
+      <div class="date-navigation">
+        <button mat-stroked-button class="today-button">Сьогодні</button>
+        <div class="month-navigation">
+          <button mat-icon-button (click)="previousMonth()" class="nav-button">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <h2 class="month-title">Березень 2025</h2>
+          <button mat-icon-button (click)="nextMonth()" class="nav-button">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+        <mat-chip class="week-chip">Тиждень 13</mat-chip>
+      </div>
+    </div>
 
+    <div class="toolbar-right">
+      <button mat-icon-button class="action-button">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button class="action-button">
+        <mat-icon>person</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
 
+  <mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer mode="side" class="side-drawer" opened></mat-drawer>
+    <mat-drawer-content class="main-content"></mat-drawer-content>
+  </mat-drawer-container>
 </div>
