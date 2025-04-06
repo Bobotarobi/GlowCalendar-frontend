@@ -31,7 +31,7 @@ export class AuthenticationService {
 
   logout() : Promise<void> {
     return new Promise((resolve, reject) => {
-      this.http.delete(url + 'authenticate/logout', {}).subscribe({
+      this.http.delete(url + '/authenticate/logout', {}).subscribe({
         next: () => {
           resolve();
         },
