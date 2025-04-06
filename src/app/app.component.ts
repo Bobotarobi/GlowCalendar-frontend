@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ConfirmRegisterPageComponent} from "./pages/confirm-register-page/confirm-register-page.component";
-import {CodeInputComponent} from "./pages/confirm-register-page/code-input/code-input.component";
-
 @Component({
   selector: 'app-root',
   standalone: true,
