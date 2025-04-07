@@ -4,25 +4,25 @@
         <h4 class="Title">
           Реєстрація за кодом
         </h4>
-        <form class="field-box">
+        <form class="field-box" [formGroup]="registerForm" (submit)="OnSubmit()">
           <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
             <mat-label>Код підтвердження</mat-label>
-            <input matInput type="text" required maxlength="8">
+            <input matInput type="text" formControlName="code" required maxlength="8">
           </mat-form-field>
           <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true">
             <mat-label>Електронна адреса</mat-label>
-            <input matInput type="email" required>
+            <input matInput type="email" formControlName="email" required>
           </mat-form-field>
           <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true" >
             <mat-label>Пароль</mat-label>
-            <input matInput type="password" [type]="hidePassword ? 'password' : 'text'" required>
+            <input matInput type="password" formControlName="password" [type]="hidePassword ? 'password' : 'text'" required>
             <button mat-icon-button matSuffix (click)="passwordClickEvent($event, 'password')" [attr.aria-label]="'Сховати пароль'" [attr.aria-pressed]="hidePassword" type="button">
               <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
             </button>
           </mat-form-field>
           <mat-form-field appearance="outline" subscriptSizing="dynamic" hideRequiredMarker="true" >
             <mat-label>Підтвердити пароль</mat-label>
-            <input matInput type="password" [type]="hideConfirmPassword ? 'password' : 'text'" required>
+            <input matInput type="password" formControlName="confirmPassword" [type]="hideConfirmPassword ? 'password' : 'text'" required>
             <button mat-icon-button matSuffix (click)="passwordClickEvent($event, 'confirmPassword')" [attr.aria-label]="'Сховати пароль'" [attr.aria-pressed]="hidePassword" type="button">
               <mat-icon>{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
             </button>
