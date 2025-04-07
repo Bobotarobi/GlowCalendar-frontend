@@ -1,6 +1,6 @@
 export interface RegisterRequest {
   birthday: string;
-  fistname: string;
+  firstname: string;
   lastname: string;
   role: 'STUDENT' | 'PARENT' | 'TEACHER';
 }

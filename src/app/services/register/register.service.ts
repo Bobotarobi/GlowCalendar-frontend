@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {RegisterResponse} from "./response/register.response";
 import { url } from "./../../app.api";
-import {resolve} from "node:path";
-
 @Injectable({
   providedIn: 'root'
 })
